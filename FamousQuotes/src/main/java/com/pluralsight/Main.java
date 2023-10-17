@@ -3,8 +3,6 @@ package com.pluralsight;
 import java.util.Scanner;
 
 public class Main {
-    public Main() {
-    }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -12,17 +10,21 @@ public class Main {
         boolean done = false;
 
         while (!done) {
-            System.out.println("Enter a number between 1 and 10");
+            int n = 1;
+            for (String s : quotes) {
+                System.out.println(n++ + ". " + s);
+            }
+
+            System.out.println("Enter a number between 1 and 10 \n");
             int value = scanner.nextInt() - 1;
 
             try {
                 System.out.println(quotes[value]);
                 done = true;
-            } catch (Exception var6) {
+            } catch (Exception e) {
                 System.out.println("Your number was out of range!");
-                System.out.println(var6);
+                System.out.println(e);
             }
         }
-
     }
 }
