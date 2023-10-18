@@ -54,4 +54,9 @@ public class Employee {
                 ", payRate=" + payRate +
                 '}';
     }
+
+    public double getCrossPay() {
+        return this.hoursWorked * this.payRate;
+    }
+
 }
