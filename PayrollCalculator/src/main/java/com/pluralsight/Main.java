@@ -12,6 +12,7 @@ public class Main {
             FileReader fileReader = new FileReader("employees.csv");
             BufferedReader buffReader = new BufferedReader(fileReader);
             String input;
+            buffReader.readLine();
             while((input = buffReader.readLine()) != null) {
                 System.out.println(input);
                 String[] words = (input.toString()).split("\\|");
