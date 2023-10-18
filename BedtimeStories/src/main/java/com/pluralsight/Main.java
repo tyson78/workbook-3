@@ -15,31 +15,31 @@ public class Main {
             );
 
             FileInputStream f1 = null;
+            String fileName = null;
             boolean done = false;
 
             while (!done) {
-                int choice = scanner.nextInt();
+                String choice = scanner.nextLine().toLowerCase();
 
                 switch (choice) {
-                    case 1:
-                        System.out.println("1. goldilocks.txt");
-                        f1 = new FileInputStream("goldilocks.txt");
+                    case "1", "goldilocks":
+                        fileName = "goldilocks.txt";
                         done = true;
                         break;
-                    case 2:
-                        System.out.println("2. hansel_and_gretel.txt");
-                        f1 = new FileInputStream("hansel_and_gretel.txt");
+                    case "2", "hansel and gretel":
+                        fileName = "hansel_and_gretel.txt";
                         done = true;
                         break;
-                    case 3:
-                        System.out.println("3. mary_had_a_little_lamb");
-                        f1 = new FileInputStream("mary_had_a_little_lamb.txt");
+                    case "3", "marry had a little lamb":
+                        fileName = "mary_had_a_little_lamb.txt";
                         done = true;
                         break;
                     default:
                         System.out.println("Please enter a number between 1 and 3: ");
                 }
             }
+
+            f1 = new FileInputStream(fileName);
             Scanner fileScanner = new Scanner(f1);
             System.out.println(f1);
 
