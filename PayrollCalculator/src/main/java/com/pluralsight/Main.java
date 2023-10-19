@@ -15,13 +15,13 @@ public class Main {
             buffReader.readLine(); // reads the current line & moves on to the next line
             while((input = buffReader.readLine()) != null) { // while loop starts from line 2 of employees.csv
                 // System.out.println(input);
-                String[] words = (input.toString()).split("\\|");
+                String[] employeeTokens = (input.toString()).split("\\|");
 
                 // intermediate declaration statements using var keyword
-                var employeeID = Integer.parseInt(words[0]);
-                var employeeName = words[1];
-                var hoursWorked = Double.parseDouble(words[2]);
-                var payRate = Double.parseDouble(words[3]);
+                var employeeID = Integer.parseInt(employeeTokens[0]);
+                var employeeName = employeeTokens[1];
+                var hoursWorked = Double.parseDouble(employeeTokens[2]);
+                var payRate = Double.parseDouble(employeeTokens[3]);
 
                 Employee e = new Employee(employeeID, employeeName, hoursWorked, payRate);
 
