@@ -47,11 +47,11 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "employeeId=" + employeeId +
-                ", name='" + name + '\'' +
-                ", hoursWorked=" + hoursWorked +
-                ", payRate=" + payRate +
+        return "\nEmployee{" +
+                "\nemployeeId=" + employeeId +
+                "\n, name='" + name + '\'' +
+                "\n, hoursWorked=" + hoursWorked +
+                "\n, payRate=" + payRate +
                 '}';
     }
 
