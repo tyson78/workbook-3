@@ -17,7 +17,7 @@ public class Main {
         formatter = DateTimeFormatter.ofPattern("MMMM dd, yyyy");
         System.out.println(today.format(formatter));
 
-        formatter = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy  hh:mm");
+        formatter = DateTimeFormatter.ofPattern("EEEE, MMM dd, yyyy  hh:mm a");
         System.out.println(today.format(formatter));
     }
 }
